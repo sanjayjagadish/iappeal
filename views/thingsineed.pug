@@ -1,0 +1,341 @@
+doctype html
+head
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width,initial-scale=1')
+title iAppeal
+link(rel='stylesheet', href='/stylesheets/style.css')
+header
+  .secure-header
+    .row
+      .column.small-4.medium-5.sm2-header__left-content
+      .column.small-4.medium-2.sm2-header__center-content.text-center
+        h1 iAppeal
+      .column.small-4.medium-5.sm2-header__right-content
+
+.row.align-center
+  .columns.small-12.medium-10
+    form#rendered-form(method='POST', action='')
+      .rendered-form
+        .formbuilder-text.form-group
+          label.formbuilder-text-label(for='full_name')
+            | Full Name
+            span.formbuilder-required *
+          input#full-name.form-control(type='text' placeholder='Full Name' name='full_name' required='required' aria-required='true')
+        .formbuilder-number.form-group
+          label.formbuilder-number-label(for='phone_number')
+            | How could we reach you?
+            span.formbuilder-required *
+          input#phone-number.form-control(type='number' placeholder='Phone no' name='phone_number' required='required' aria-required='true')
+        .formbuilder-select.form-group
+          label.formbuilder-select-label(for='select_status') Status
+          select#select-1578818269402.form-control(name='person_status')
+            option(value='Volunteer') Volunteer
+            option(value='Victim') Victim
+        .formbuilder-text.form-group
+          label.formbuilder-text-label(for='address') Where do we reach you?
+          input#address.form-control(type='text' placeholder='Address' name='address')
+        div
+          h3 Please select the items you need
+        .formbuilder-checkbox-group.form-group
+          label.formbuilder-checkbox-group-label(for='food') Food
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#food(name='food' value='Muesli bar' type='checkbox')
+              label(for='muesli_bar') Muesli bar
+            .formbuilder-checkbox-inline
+              input#packaged-baby-food(name='food' value='Packaged baby food' type='checkbox')
+              label(for='packaged_baby_food') Packaged baby food
+            .formbuilder-checkbox-inline
+              input#milk(name='food' value='Powder/long life milk' type='checkbox')
+              label(for='milk') Powder/long life milk
+            .formbuilder-checkbox-inline
+              input#Chips(name='food' value='Chips' type='checkbox')
+              label(for='Chips') Chips
+            .formbuilder-checkbox-inline
+              input#Lollies(name='food' value='Lollies' type='checkbox')
+              label(for='Lollies') Lollies
+            .formbuilder-checkbox-inline
+              input#Tea(name='food' value='Tea' type='checkbox')
+              label(for='Tea') Tea
+            .formbuilder-checkbox-inline
+              input#Salt(name='food' value='Salt' type='checkbox')
+              label(for='Salt') Salt
+            .formbuilder-checkbox-inline
+              input#Sugar(name='food' value='Sugar' type='checkbox')
+              label(for='Sugar') Sugar
+            .formbuilder-checkbox-inline
+        .formbuilder-text.form-group
+          label.formbuilder-text-label(for='food_other') Please enter any other food item
+          input#text-1578818711190.form-control(type='text' name='food')
+        .formbuilder-checkbox-group.form-group
+          label.formbuilder-checkbox-group-label(for='SPnT') Sanitary products and Toiletries
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#Toothbrush(name='SPnT' value='Toothbrush' type='checkbox')
+              label(for='Toothbrush') Toothbrush
+            .formbuilder-checkbox-inline
+              input#Toothpaste(name='SPnT' value='Toothpaste' type='checkbox')
+              label(for='Toothpaste') Toothpaste
+            .formbuilder-checkbox-inline
+              input#Wipes(name='SPnT' value='Wipes' type='checkbox')
+              label(for='Wipes') Wipes
+            .formbuilder-checkbox-inline
+              input#Nappies(name='SPnT' value='Nappies' type='checkbox')
+              label(for='Nappies') Nappies
+            .formbuilder-checkbox-inline
+              input#Pads(name='SPnT' value='Pads' type='checkbox')
+              label(for='Pads') Pads
+            .formbuilder-checkbox-inline
+              input#Toilet-roll(name='SPnT' value=' Toilet roll ' type='checkbox')
+              label(for='Toilet_roll')  Toilet roll
+            .formbuilder-checkbox-inline
+              input#Shampoo(name='SPnT' value='Shampoo' type='checkbox')
+              label(for='Shampoo') Shampoo
+            .formbuilder-checkbox-inline
+              input#Soap(name='SPnT' value='Soap' type='checkbox')
+              label(for='Soap') Soap
+            .formbuilder-checkbox-inline
+              input#Towel(name='SPnT' value='Towel' type='checkbox')
+              label(for='Towel') Towel
+            .formbuilder-checkbox-inline
+              input#r-b(name='SPnT' value='Rubbish bags' type='checkbox')
+              label(for='rubbish_bags') Rubbish bags
+        .formbuilder-text.form-group.field-text-1578819023503
+          label.formbuilder-text-label(for='SnPT_other') Please enter any other sanitary and toiletaries
+          input#text-1578819023503.form-control(type='text' name='SPnT')
+        .formbuilder-checkbox-group.form-group
+          label.formbuilder-checkbox-group-label(for='Stationary') Stationary
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#Pen(name='Stationary' value='Pen' type='checkbox')
+              label(for='Pen') Pen
+            .formbuilder-checkbox-inline
+              input(name='Stationary' value='Color pencils' type='checkbox')
+              label(for='Color_pencils') Color pencils
+            .formbuilder-checkbox-inline
+              input#Paper(name='Stationary' value='Paper' type='checkbox')
+              label(for='Paper') Paper
+            .formbuilder-checkbox-inline
+              input#Tapes(name='Stationary' value='Tapes' type='checkbox')
+              label(for='Tapes') Tapes
+            .formbuilder-checkbox-inline
+              input#Books(name='Stationary' value='Books' type='checkbox')
+              label(for='Books') Books
+        .formbuilder-text.form-group
+          label.formbuilder-text-label(for='Stationary_other') Please enter any other stationary item
+          input#Stationary_other.form-control(type='text' name='Stationary')
+        .formbuilder-checkbox-group.form-group
+          label.formbuilder-checkbox-group-label(for='First_aid') First aid
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#Vaseline(name='First_aid' value='Vaseline' type='checkbox')
+              label(for='Vaseline') Vaseline
+            .formbuilder-checkbox-inline
+              input#Vitamins(name='First_aid' value='Vitamins' type='checkbox')
+              label(for='Vitamins') Vitamins
+            .formbuilder-checkbox-inline
+              input#Hydrolyte(name='First_aid' value='Hydrolyte' type='checkbox')
+              label(for='Hydrolyte') Hydrolyte
+            .formbuilder-checkbox-inline
+              input#mask(name='First_aid' value='Burns  Airway (i.e. Mask, buffers)' type='checkbox')
+              label(for='mask') Burns  Airway (i.e. Mask, buffers)
+            .formbuilder-checkbox-inline
+              input#Epipen(name='First_aid' value='Epipen' type='checkbox')
+              label(for='Epipen') Epipen
+            .formbuilder-checkbox-inline
+              input#Insulin(name='First_aid' value='Insulin' type='checkbox')
+              label(for='Insulin') Insulin
+            .formbuilder-checkbox-inline
+              input#Medication(name='First_aid' value='Medication' type='checkbox')
+              label(for='Medication') Medication
+            .formbuilder-checkbox-inline
+              input#Aloe_Vera_gel(name='First_aid' value='Aloe Vera gel ' type='checkbox')
+              label(for='Aloe_Vera_gel') Aloe Vera gel
+            .formbuilder-checkbox-inline
+              input#Bottled_water(name='First_aid' value='Bottled water' type='checkbox')
+              label(for='Bottled_water') Bottled water
+            .formbuilder-checkbox-inline
+              input#eye_drops(name='First_aid' value='Eye drops' type='checkbox')
+              label(for='eye_drops') Eye drops
+            .formbuilder-checkbox-inline
+              input#Sinus_wash(name='First_aid' value='Sinus wash ' type='checkbox')
+              label(for='Sinus_wash') Sinus wash
+            .formbuilder-checkbox-inline
+              input#Lozenges(name='First_aid' value='Lozenges' type='checkbox')
+              label(for='Lozenges') Lozenges
+            .formbuilder-checkbox-inline
+              input#Bandage(name='First_aid' value='Bandage' type='checkbox')
+              label(for='Bandage') Bandage
+            .formbuilder-checkbox-inline
+              input#Sunscreen(name='First_aid' value='Sunscreen' type='checkbox')
+              label(for='Sunscreen') Sunscreen
+        .formbuilder-text.form-group
+          label.formbuilder-text-label(for='First_aid_other') Please specify any particular medications or injuries
+          input#First_aid.form-control(type='text' name='First_aid')
+        .formbuilder-checkbox-group.form-group
+          label.formbuilder-checkbox-group-label(for='Survival') Survival
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#Survival-0(name='Survival' value='Water' type='checkbox')
+              label(for='Survival-0') Water
+            .formbuilder-checkbox-inline
+              input#Survival-1(name='Survival' value='Hose' type='checkbox')
+              label(for='Survival-1') Hose
+            .formbuilder-checkbox-inline
+              input#Survival-2(name='Survival' value='Electricity' type='checkbox')
+              label(for='Survival-2') Electricity
+            .formbuilder-checkbox-inline
+              input#Survival-3(name='Survival' value='Phone access' type='checkbox')
+              label(for='Survival-3') Phone access
+            .formbuilder-checkbox-inline
+              input#Survival-4(name='Survival' value='Internet access' type='checkbox')
+              label(for='Survival-4') Internet access
+            .formbuilder-checkbox-inline
+              input#Survival-5(name='Survival' value='Generators' type='checkbox')
+              label(for='Survival-5') Generators
+            .formbuilder-checkbox-inline
+              input#Survival-6(name='Survival' value='Truck / transport' type='checkbox')
+              label(for='Survival-6') Truck / transport
+            .formbuilder-checkbox-inline
+              input#Survival-7(name='Survival' value='Fuel' type='checkbox')
+              label(for='Survival-7') Fuel
+            .formbuilder-checkbox-inline
+              input#Survival-8(name='Survival' value='Matches' type='checkbox')
+              label(for='Survival-8') Matches
+            .formbuilder-checkbox-inline
+              input#Survival-9(name='Survival' value='Candles' type='checkbox')
+              label(for='Survival-9') Candles
+        .formbuilder-text.form-group
+          label.formbuilder-text-label(for='Survival_other') Please specify any other item for survival kit
+          input#Survival.form-control(type='text' name='Survival')
+        .formbuilder-select.form-group
+          label.formbuilder-select-label(for='Bedding') Bedding
+          select#Bedding.form-control(name='Bedding' multiple='true')
+            option#Bedding-0(value='Blankets ' ) Blankets
+            option#Bedding-1(value='Sleeping bag') Sleeping bag
+        .formbuilder-select.form-group
+          label.formbuilder-select-label(for='Storage') Storage
+          select#Storage.form-control(name='Storage' multiple='true')
+            option#Storage-0(value='Boxes') Boxes
+            option#Storage-1(value='Zipped bags ') Zipped bags
+        .formbuilder-select.form-group
+          label.formbuilder-select-label(for='kids_items') Kids items
+          select#select-1578820082811.form-control(name='kids_items' multiple='true')
+            option#select-1578820082811-0(value='Toys' ) Toys
+            option#select-1578820082811-1(value='Books') Books
+            option#select-1578820082811-2(value='Entertainment') Entertainment
+        .formbuilder-select.form-group
+          label.formbuilder-select-label(for='Home_Shelter_Items') Home and Shelter related items
+          select#Home_Shelter_Items.form-control(name='Home_Shelter_Items' multiple='true')
+            option#Home_Shelter_Items-0(value='Shelter' ) Shelter
+            option#Home_Shelter_Items-1(value='Tent') Tent
+            option#Home_Shelter_Items-2(value='Cookery') Cookery
+        .formbuilder-checkbox-group.form-group
+          label.formbuilder-checkbox-group-label(for='Electronics') Electronics
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#Electronics-0(name='Electronics' value='Extension cord' type='checkbox')
+              label(for='Electronics-0') Extension cord
+            .formbuilder-checkbox-inline
+              input#Electronics-1(name='Electronics' value='Radio' type='checkbox')
+              label(for='Electronics-1') Radio
+            .formbuilder-checkbox-inline
+              input#Electronics-2(name='Electronics' value='Torch' type='checkbox')
+              label(for='Electronics-2') Torch
+            .formbuilder-checkbox-inline
+              input#Electronics-3(name='Electronics' value='Batteries (DD, AA, AAA)' type='checkbox')
+              label(for='Electronics-3') Batteries (DD, AA, AAA)
+            .formbuilder-checkbox-inline
+              input#Electronics-4(name='Electronics' value='Charger' type='checkbox')
+              label(for='Electronics-4') Charger
+        .formbuilder-text.form-group
+          label.formbuilder-text-label(for='Electronics_other') Please specify any other electronics items
+          input#text-1578820377127.form-control(type='text' name='Electronics')
+        .formbuilder-checkbox-group.form-group.field-k-top
+          label.formbuilder-checkbox-group-label(for='k-top') kids top
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#k-top-0(name='k-top' value='xs' type='checkbox')
+              label(for='k-top-0') xs
+            .formbuilder-checkbox-inline
+              input#k-top-1(name='k-top' value='small' type='checkbox')
+              label(for='k-top-1') small
+            .formbuilder-checkbox-inline
+              input#k-top-2(name='k-top' value='medium' type='checkbox')
+              label(for='k-top-2') medium
+            .formbuilder-checkbox-inline
+              input#k-top-3(name='k-top' value='large' type='checkbox')
+              label(for='k-top-3') large
+            .formbuilder-checkbox-inline
+              input#k-top-4(name='k-top' value='xl' type='checkbox')
+              label(for='k-top-4') xl
+        .formbuilder-checkbox-group.form-group.field-m-top
+          label.formbuilder-checkbox-group-label(for='m-top') Men top
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#m-top-0(name='m-top' value='small' type='checkbox')
+              label(for='m-top-0') small
+            .formbuilder-checkbox-inline
+              input#m-top-1(name='m-top' value='medium' type='checkbox')
+              label(for='m-top-1') medium
+            .formbuilder-checkbox-inline
+              input#m-top-2(name='m-top' value='large' type='checkbox')
+              label(for='m-top-2') large
+            .formbuilder-checkbox-inline
+              input#m-top-3(name='m-top' value='xl' type='checkbox')
+              label(for='m-top-3') xl
+            .formbuilder-checkbox-inline
+              input#m-top-4(name='m-top' value='2xl' type='checkbox')
+              label(for='m-top-4') 2xl
+        .formbuilder-checkbox-group.form-group.field-w-top
+          label.formbuilder-checkbox-group-label(for='w-top') women top
+          .checkbox-group
+            .formbuilder-checkbox-inline
+              input#w-top-0(name='w-top' value='xs' type='checkbox')
+              label(for='w-top-0') xs
+            .formbuilder-checkbox-inline
+              input#w-top-1(name='w-top' value='small' type='checkbox')
+              label(for='w-top-1') small
+            .formbuilder-checkbox-inline
+              input#w-top-2(name='w-top' value='medium' type='checkbox')
+              label(for='w-top-2') medium
+            .formbuilder-checkbox-inline
+              input#w-top-3(name='w-top' value='large' type='checkbox')
+              label(for='w-top-3') large
+            .formbuilder-checkbox-inline
+              input#w-top-4(name='w-top' value='xl' type='checkbox')
+              label(for='w-top-4') xl
+        .formbuilder-text.form-group.field-m-footwear-size
+          label.formbuilder-text-label(for='m-footwear-size') Men footwear size
+          input#m-footwear-size.form-control(type='text' name='m-footwear-size' maxlength='5')
+        .formbuilder-text.form-group.field-w-footwear-size
+          label.formbuilder-text-label(for='w-footwear-size') Women &apos;s footwear size
+          input#w-footwear-size.form-control(type='text' name='w-footwear-size' maxlength='5')
+        .formbuilder-text.form-group.field-k-footwear-size
+          label.formbuilder-text-label(for='k-footwear-size') Kids &apos;s footwear waist size
+          input#k-footwear-size.form-control(type='text' name='k-footwear-size' maxlength='5')
+        .formbuilder-text.form-group.field-m-bottom-size
+          label.formbuilder-text-label(for='m-bottom-size') Men &apos;s bottom size
+          input#m-bottom-size.form-control(type='text' name='m-bottom-size')
+        .formbuilder-text.form-group.field-w-bottom-size
+          label.formbuilder-text-label(for='w-bottom-size') women &apos;s bottom size 
+          input#w-bottom-size.form-control(type='text' name='w-bottom-size')
+        .formbuilder-text.form-group.field-k-bottom-size
+          label.formbuilder-text-label(for='k-bottom-size') kids &apos;s bottom size
+          input#k-bottom-size.form-control(type='text' name='k-bottom-size')
+        .formbuilder-textarea.form-group
+          label.formbuilder-textarea-label(for='other_items') Please enter any other items not listed above
+          textarea#other_items.form-control(type='textarea' name='other_items')
+        .formbuilder-button.form-group.btn-grp
+          button#resetbtn.iappeal-btn.iappeal-btn--secondary(type='reset') Reset
+          button#submit-btn.iappeal-btn(type='submit') Submit
+
+footer.secure-footer
+  .row
+    p.column.small-12.medium-6.sm-footer__copy iAppeal
+    p.column.small-12.medium-6.sm-footer__copy.sm-footer__copy--text-right
+
+    if errors 
+      ul
+      for error in errors
+        li!= error.msg
