@@ -21,61 +21,49 @@ exports.thingsineed_create_post = [
     sanitizeBody('phone_number').escape(),
     sanitizeBody('address').escape(),
     sanitizeBody('person_status').escape(),
-    sanitizeBody('food').escape(),
-    sanitizeBody('SPnT').escape(),
-    sanitizeBody('Stationary').escape(),
-    sanitizeBody('Survival').escape(),
-    sanitizeBody('First_aid').escape(),
-    sanitizeBody('Electronics').escape(),
-    sanitizeBody('Bedding').escape(),
-    sanitizeBody('Storage').escape(),
-    sanitizeBody('other_items').escape(),
-    sanitizeBody('kids_item').escape(),
-    sanitizeBody('k_top').escape(),
-    sanitizeBody('m_top').escape(),
-    sanitizeBody('w_top').escape(),
-    sanitizeBody('Home_Shelter_Items').escape(),
-    sanitizeBody('m_bottom_size').escape(),
-    sanitizeBody('w_bottom_size').escape(),
-    sanitizeBody('k_bottom_size').escape(),
-    sanitizeBody('m_footware_size').escape(),
-    sanitizeBody('w_footware_size').escape(),
-    sanitizeBody('k_footware_size').escape(),
+
 
     // Process request after validation and sanitization.
     (req, res, next) => {
         // Extract the validation errors from a request.
-
+        console.log('body', JSON.stringify(req.body));
         const errors = validationResult(req);
         // Create a genre object with escaped and trimmed data.
          var thingsineed = new ThingsINeed({
         
-          full_name: req.body.full_name ,
-          phone_number: req.body.phone_number,
-          address: req.body.address ,
-          person_status: req.body.person_status ,
-          food: req.body.food ,
-          sanitary_toiletries: req.body.SPnT ,
-          electronics: req.body.Electronics ,
-          stationary: req.body.Stationary ,
-          first_aid: req.body.First_aid ,
-          survival: req.body.Survival ,
-          bedding: req.body.Bedding ,
-          storage: req.body.Storage ,
-          kids_items: req.body.kids_item ,
-          home_shelter_items: req.body.Home_Shelter_Items ,
-          kids_top: req.body.k_top ,
-          men_top: req.body.m_top ,
-          women_top: req.body.w_top ,
-          men_footware_size: req.body.m_footware_size ,
-          women_footware_size : req.body.w_footware_size ,
-          kid_footware_size: req.body.k_footware_size ,
-          men_bottom_size: req.body.m_bottom_size ,
-          women_bottom_size: req.body.w_bottom_size ,
-          kid_bottom_size: req.body.k_bottom_size ,
-          other: req.body.other
+          "Full Name": req.body.full_name,
+          "Phone Number": req.body.phone_number,
+          "Address": req.body.address ,
+          "Person Status": req.body.person_status ,
+          "Food": filter(req.body.food),
+          "Sanitary products and Toiletries": filter(req.body.SPnT) ,
+          "Electronics": filter(req.body.Electronics) ,
+          "Stationary": filter(req.body.Stationary) ,
+          "First Aid": filter(req.body.First_aid) ,
+          "Survival": filter(req.body.Survival) ,
+          "Bedding": req.body.bedding ,
+          "Storage": req.body.Storage ,
+          "Kids Items": req.body.kids_items ,
+          "Home Shelter Items": req.body.Home_Shelter_Items ,
+          "Kids Clothing": req.body.k_clothing ,
+          "Men Clothing": req.body.m_clothing ,
+          "Women Clothing": req.body.w_clothing ,
+          "Men Footware Size": req.body.m_footware_size ,
+          "Women Footware Size" : req.body.w_footware_size ,
+          "Kid Footware Size": req.body.k_footware_size ,
+          "Other": req.body.other
          }
          );
+
+         function filter(el) {
+           var oldArray = [];
+           var oldArray = el;
+           var newArray = oldArray && oldArray.filter(function (el) {
+                         return el != null && el != '';
+          });
+          return newArray;
+         }
+
         if (!errors.isEmpty()) {
             // There are errors. Render the form again with sanitized values/error messages.
             res.render('thingsineed', { title: 'Create thingsineed', thingsineed: thingsineed, errors: errors.array()});
